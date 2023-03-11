@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- link the css file -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tilt+Prism&display=swap" rel="stylesheet">
+    <title>To Do List</title>
+</head>
+
+<body>
+    <div class="box" id="heading">
+        <!-- declaring value of the day using ejs -->
+        <h1>
+            <%=kindOfDay%>
+        </h1>
+    </div>
+    <div class="box">
+        <!-- declaring value of the p items using ejs and for-loop -->
+        <% for (var i=0;i<newListItems.length;i++){ %>
+            <div class="item">
+                <input type="checkbox">
+                <p>
+                    <%= newListItems[i] %>
+                </p>
+            </div>
+            <%}%>
+                <!-- getting list input from users -->
+        <form class="" action="/" method="post">
+            <input type="text" name="newItem" placeholder="Add New Item Here" autocomplete="off">
+            <button type="submit" name="button">+</button>
+        </form>
+    </div>
+
+
+
+</body>
+
+</html>
